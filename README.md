@@ -1,7 +1,8 @@
 <h1>Hacksudo Brainpan BOF server </h1>
 visit brainpan 1 box walktrhough 
 https://leetvilu.blogspot.com/2021/03/brainpan-1-box-walkktrhough-hacksudocom.html
-<h2>steps</h2></br>
+<h2>Steps</h2></br>
+All BOF step are given bellow check clearfully 
 <h3>1 spiking</n>
 <br>2 fuzzing</n>
 <br>3 finding the offset
@@ -9,6 +10,7 @@ https://leetvilu.blogspot.com/2021/03/brainpan-1-box-walkktrhough-hacksudocom.ht
 <br>5 finding bad characters
 <br>6 finding the right modules
 <br>7 Generating Shellcode</h3></br></br></br></br></br>
+i hope so you understand my Wrteup :- vishal waghmare
 <p><h2>1 Spiking </h2></p>
 First make sure Your firewall real protection turn off
 Now run brainpan server as admin
