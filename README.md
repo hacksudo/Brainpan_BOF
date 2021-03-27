@@ -7,8 +7,8 @@
 <br>5 finding bad characters
 <br>6 finding the right modules
 <br>7 Generating Shellcode</h3></br></br></br></br></br>
-<h2>1 Spiking </h2>
-First make sure youe firewall real protection turn off
+<p><h2>1 Spiking </h2></p>
+First make sure Your firewall real protection turn off
 Now run brainpan server as admin
 use your spiking.spk to find Vulnerability 
 script is --> 
@@ -18,17 +18,17 @@ s_string_variable("0");
 </b>
 
 Now use generic_send_tcp (target)IP (target)PORT spiking.spk 0 0
-(if server scrash ? boom you  succeed 
+(if server crash ? boom you  succeed 
 
 <h2> 2 fuzzing</h2>
 Now time to find Number of size buffer which crash server 
-(user chmod +x * )
+(use chmod +x * )
  ./brainpan.py 192.168.43.161 9999 ( here your brainpan server will crash and you will get avarage amount o buffer size
 Now create pattern , why ? to find exact number of Buffer size
 First create unic pattern using metasploit tool
  /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 1500( here your last (brainpan.py) crash avarage number , which 
 must greater.  
- Now usr offsetcalc.py to find lenght later we will find offset which is our exact buffer size in byte :D 
+ Now use offsetcalc.py to find lenght which you will use later to  find offset which is our exact buffer size in byte :D 
  ./offsetcalc.py IP PORT
 get EIP value ? now use it at offset
 
@@ -39,16 +39,17 @@ find offset
  boom ?? we get Exact Number of size which is 524
 
 <h2>4. overwriting the EIP</h2>
-Now Verify EIP Overwrite or Not By B, add B*4 and check debuger print 42424242 at EIP or not
+Now Verify EIP Overwrite, add B*4 and check debuger print 42424242 at EIP 
 ./brainpanEIPWt.py IP PORT
  YES --> ok great
 
 <h2>5. finding bad characters</h2>
-Now find Bad chars which is use while create shellcode , actual we dont found bad chars in this servers, but dont skip this step go head
+Now find Bad chars which is use while create shellcode , actualy  we dont need to find  bad chars in this servers, but dont skip this step go head
 and just do practice ;) 
  ./brainpanBadChard.py IP PORT
-remember how to find Bad chars ? opps no ? dont worry just do hard else catch me on insta i'll explain you :)
-bad chars 
+remember how to find Bad chars ? opps no ? dont worry just do hard else catch me on insta i'll explain you 
+https://instagram.com/realvilu
+:)
 
 <h2>6. finding the right modules</h2>
 Downloaded Mona modules ? . no ? download it  --> https://github.com/corelan/mona and add it at exact place
@@ -56,11 +57,11 @@ use command
 !mona mudules
 !mona find -s "\xff\xe4" -m brainpan.dll
 now find base value note it down
-and make sure ur JMP ESP use Using nasm_shell
+and make sure ur JMP ESP Using nasm_shell
 /usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
 
 now do make sure you selected your JMP ESP make sure your base value is right 
-click arrow type jump number
+
 fire offsetverify.py
 ./offsetverify.py IP PORT
 make sure its work you controling EIP or not if yes then go head and do shell using shellcode
@@ -79,7 +80,7 @@ and now fire your final code
 boom you will get shell 
 if not then sorry please recheck all step clearly 
 thanks i hope you love this repo :D 
-
+<h1>love you guys thanks for watching </h1>
 <b>
 <br>visit our official Website : https://hacksudo.com</br>
 <br>hacksudo Linkedin https://www.linkedin.com/in/hack-sudo-230a871b3/</br>
