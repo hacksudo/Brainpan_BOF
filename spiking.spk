@@ -1,0 +1,2 @@
+s_readline();
+s_string_variable("0");
