@@ -1,6 +1,6 @@
 <h1>Brainpan BOF server </h1>
 <br><h2>steps</h2>
-<br><br><h3>1. spiking</n>
+<br><h3>1. spiking</n>
 <br>2.fuzzing</n>
 <br>3. finding the offset
 <br>4. overwriting the EIP
@@ -8,10 +8,10 @@
 <br>6. finding the right modules
 <br>7. Generating Shellcode</h3>
 
-    <h2>    1 .spiking </h2> 
-*First make sure youe firewall real protection turn off
-*Now run brainpan server as admin
-*use your spiking.spk to find Vulnerability 
+    <h2>1. spiking </h2> 
+First make sure youe firewall real protection turn off
+Now run brainpan server as admin
+use your spiking.spk to find Vulnerability 
 script is --> 
 <b>s_readline();
 "s_string("TRUN ");"
