@@ -1,7 +1,7 @@
 <h1>Brainpan BOF server </h1>
-<br><h2>steps</h2></br> 
-<br><h3>1. spiking</br>
-<br>2.fuzzing</br>
+<n><h2>steps</h2></n> 
+<n><h3>1. spiking</n>
+<n>2.fuzzing</n>
 3. finding the offset
 4. overwriting the EIP
 5. finding bad characters
