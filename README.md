@@ -1,4 +1,6 @@
 <h1>Hacksudo Brainpan BOF server </h1>
+visit brainpan 1 box walktrhough 
+https://leetvilu.blogspot.com/2021/03/brainpan-1-box-walkktrhough-hacksudocom.html
 <h2>steps</h2></br>
 <h3>1 spiking</n>
 <br>2 fuzzing</n>
