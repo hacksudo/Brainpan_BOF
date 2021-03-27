@@ -1,38 +1,39 @@
 <h1>Brainpan BOF server </h1>
-<br><h2>steps</h2>
+<br><h2>steps</h2></br>
 <br><h3>1. spiking</n>
 <br>2.fuzzing</n>
 <br>3. finding the offset
 <br>4. overwriting the EIP
 <br>5. finding bad characters
 <br>6. finding the right modules
-<br>7. Generating Shellcode</h3>
+<br>7. Generating Shellcode</h3></br></br></br></br></br></br></br>
 
-    <h2>1. spiking </h2> 
+<h2> 1. Spiking </h2> 
+
 First make sure youe firewall real protection turn off
 Now run brainpan server as admin
 use your spiking.spk to find Vulnerability 
 script is --> 
-<b>s_readline();
+<b> s_readline();
 "s_string("TRUN ");"
 s_string_variable("0");
 </b>
 
-*Now use generic_send_tcp (target)IP (target)PORT spiking.spk 0 0
+Now use generic_send_tcp (target)IP (target)PORT spiking.spk 0 0
 (if server scrash ? boom you  succeed :D )`
 
 
-``     <h2>2 .fuzzing</h2>
+<h2>2 .fuzzing</h2>
 
 *Now time to find Number of size buffer which crash server 
 (user chmod +x * )
-* ./brainpan.py 192.168.43.161 9999 ( here your brainpan server will crash and you will get avarage amount o buffer size
+ ./brainpan.py 192.168.43.161 9999 ( here your brainpan server will crash and you will get avarage amount o buffer size
 *Now create pattern , why ? to find exact number of Buffer size
 *First create unic pattern using metasploit tool
-* /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 1500( here your last (brainpan.py) crash avarage number , which 
+ /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 1500( here your last (brainpan.py) crash avarage number , which 
 must greater.  
-* Now usr offsetcalc.py to find lenght later we will find offset which is our exact buffer size in byte :D 
-* ./offsetcalc.py IP PORT
+ *Now usr offsetcalc.py to find lenght later we will find offset which is our exact buffer size in byte :D 
+ ./offsetcalc.py IP PORT
 *get EIP value ? now use it at offset
 		
 		<h2>3. finding the offset</h2>
