@@ -10,8 +10,7 @@ All BOF step are given bellow check clearfully
 <br>5 finding bad characters
 <br>6 finding the right modules
 <br>7 Generating Shellcode</h3></br></br></br></br></br>
-i hope so you understand my Wrteup :- vishal waghmare
-<p><h2>1 Spiking </h2></p>
+<h2>1 Spiking </h2>
 First make sure Your firewall real protection turn off
 Now run brainpan server as admin
 use your spiking.spk to find Vulnerability 
