@@ -3,7 +3,7 @@ visit brainpan 1 box walktrhough
 https://leetvilu.blogspot.com/2021/03/brainpan-1-box-walkktrhough-hacksudocom.html
 <br>youtube channel:- https://youtube.com/hackshala
 <h2>Steps</h2></br>
-All BOF step are given bellow check clearfully 
+All BOF step are given bellow check it 
 <h3>1 spiking</n>
 <br>2 fuzzing</n>
 <br>3 finding the offset
